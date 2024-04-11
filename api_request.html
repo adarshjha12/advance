@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: violet;">
+   <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit suscipit, blanditiis illum laboriosam exercitationem accusamus architecto voluptate nesciunt. Recusandae ipsa non placeat reprehenderit porro doloribus?</h2>
+   <!-- <img src="https://avatars.githubusercontent.com/u/11613311?v=4"
+   " alt="aaa"> -->
+</body>
+<script>
+    let newUrl = 'https://api.github.com/users/hiteshchoudhary'
+   const xhr = new XMLHttpRequest(); 
+   xhr.open('GET', newUrl)
+   xhr.onreadystatechange = function (){
+  console.log(xhr.readyState);
+
+   if (xhr.readyState === 4) {
+    let respData = JSON.parse(this.responseText)
+    console.log(typeof respData);
+    // console.log(respData);
+
+    let newElmnt = document.createElement('span')
+document.body.appendChild(newElmnt)
+document.body.style.width = '100vw'
+document.body.style.height = '100vh'
+document.body.style.display = 'grid'
+document.body.style.placeItems = 'center'
+//  newElmnt.innerHTML = 'hiii'
+ newElmnt.style.height = '300px'
+ newElmnt.style.width = '200px'
+ newElmnt.style.padding = '1rem'
+ newElmnt.style.border = '2px solid greenyellow'
+ newElmnt.style.borderRadius = '10px'
+ newElmnt.style.textAlign = 'center'
+
+let imageUrl = respData.avatar_url
+console.log(typeof imageUrl);
+let img = document.createElement('img')
+img.setAttribute('src', imageUrl)
+newElmnt.appendChild(img)
+img.style.width = '180px'
+img.style.height = 'auto'
+
+let info = document.createElement('p')
+newElmnt.appendChild(info)
+info.innerHTML += `Followers:  ${respData.followers}.`
+
+info.innerHTML +=`    Name:  ${respData.name}`
+console.log(imageUrl)
+
+}
+   }
+
+   xhr.send()
+ 
+</script>
+</html>
