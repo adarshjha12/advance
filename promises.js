@@ -87,5 +87,31 @@ async function promiseFun() {
    }
 }
 
-
 promiseFun()
+
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response) => {
+
+  return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => {
+    console.log(error);
+})
+
+
+async function aaaaa () {
+   try {
+    let abvc = await fetch('https://api.github.com/users/hiteshchoudhary')
+  let data = await abvc.json()
+  console.log(data);
+   } catch (error) {
+    console.log(error);
+   }
+}
+
+
+aaaaa()
