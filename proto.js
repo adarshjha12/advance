@@ -1,12 +1,12 @@
-function multiplyFive (num){
+// function multiplyFive (num){
 
-   return num * 5
-}
-console.log(multiplyFive(6));
+//    return num * 5
+// }
+// console.log(multiplyFive(6));
 
-multiplyFive.power = 2
-console.log(multiplyFive.power);
-console.log(multiplyFive.prototype);
+// multiplyFive.power = 2
+// console.log(multiplyFive.power);
+// console.log(multiplyFive.prototype);
 
 
 function user(name, price) {
@@ -15,17 +15,16 @@ function user(name, price) {
 }
  
 user.prototype.newFunc = function (){
-    this.price++
-    // return this.price'
+   return this.price++
 }
 user.prototype.print = function (){
-    console.log(`price is ${this.price}`);
+   return `price is ${this.price}`;
 }
 
 let adarsh = new user('tea', 22)
-let abdvilliers = user('samosa', 550)
+let abdvilliers =new user('samosa', 550)
 
-// console.log(adarsh);
-// adarsh.newFunc()
 
-console.log(adarsh.print());
+
+console.log(adarsh.newFunc())
+console.log(adarsh.print())
