@@ -101,3 +101,5 @@ Dog.prototype.bark = function() {
 var myDog = new Dog('Buddy', 'Labrador');
 myDog.sayName(); // Output: My name is Buddy
 myDog.bark();    // Output: Woof!
+
+
