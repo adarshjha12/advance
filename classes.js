@@ -32,3 +32,8 @@ changeCaseToUpper(){
 let adarsh = new user1('abhishek', 123)
 console.log(adarsh.changeCaseToUpper());
 
+
+
+
+// inheritance with classsss
+

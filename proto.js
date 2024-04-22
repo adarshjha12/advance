@@ -103,3 +103,28 @@ myDog.sayName(); // Output: My name is Buddy
 myDog.bark();    // Output: Woof!
 
 
+// another example of prototypal inheritance
+
+function father(name) {
+    this.name = name
+}
+
+father.prototype.title = function(){
+    return `main hoon beta ${this.name}`
+}
+
+function son(name, aawaj){
+    father.call(this, name)
+    this.aawaj = aawaj
+}
+
+son.prototype = Object.create(father.prototype)
+son.prototype.constructor = son
+
+son.prototype.voice = function(){
+   return 'heavy';
+};
+
+let beta = new son('sala', 'gg')
+console.log(beta.title());
+console.log(beta.voice());
