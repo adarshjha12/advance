@@ -33,7 +33,38 @@ let adarsh = new user1('abhishek', 123)
 console.log(adarsh.changeCaseToUpper());
 
 
-
-
 // inheritance with classsss
+
+
+class user3 {
+    constructor(username, email){
+        this.username = username
+        this.email = email
+    }
+
+    loginMessage(){
+        console.log(`${this.username} has logged in, his email is ${this.email}`);
+    }
+}
+
+class user4 extends user3 {
+    constructor (password, username, email){
+
+        super(username, email)
+        this.password = password
+       
+    }
+
+    logOutMessage(){
+        console.log(`${this.username} has just logged out`);
+    }
+}
+
+let newUser = new user4('15226asf', 'jha kumar', '@gmail.com')
+// console.log(newUser);
+// newUser.logOutMessage()
+newUser.loginMessage()
+
+let nextuser = new user3 ('hitesh', 'g.com')
+nextuser.loginMessage()
 
