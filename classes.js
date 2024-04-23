@@ -68,3 +68,4 @@ newUser.loginMessage()
 let nextuser = new user3 ('hitesh', 'g.com')
 nextuser.loginMessage()
 
+console.log(nextuser instanceof user3);
