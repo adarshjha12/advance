@@ -26,7 +26,7 @@ let anand = new user('adarsh', 'gmail.com')
 // this code will throw error because of static keyword
 
 // you can use static keyword when you want that the method you created in a class
-// you want this method to be use within the class. any instances created by this class can't access can't accesss the method.
+// you want this method to be use within the class. any instances created by this class can't access the method.
 
 // you can use it like this
 
